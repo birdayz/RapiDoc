@@ -119,9 +119,8 @@ export default class RapiDoc extends LitElement {
         }
 
         .logo { 
-          height:36px;
-          width:36px;
-          margin-left:5px; 
+          margin-left:10px; 
+	  margin-right: -10px;
         }
         .only-large-screen-flex,
         .only-large-screen{
@@ -171,8 +170,8 @@ export default class RapiDoc extends LitElement {
       ${this.showHeader==='false'?'':html`
       <div class="row header regular-font" style="padding:8px 4px 8px 4px;min-height:48px;position:sticky;top:0;flex:1">
         <div class="only-large-screen-flex" style="align-items: center;">
-          <slot name="logo" class="logo">
-            <m-logo style="height:36px;width:36px;margin-left:5px"></m-logo>
+          <slot name="logo">
+            <m-logo class="logo"></m-logo>
           </slot>  
           <div class="header-title">${this.headingText}</div>
         </div>  
